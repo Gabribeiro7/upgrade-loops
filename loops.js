@@ -72,10 +72,21 @@ for (const data in alien) {
 //? Usa un bucle for para recorrer todos los destinos del array y elimina los 
 //? elementos que tengan el id 11 y 40. Imprime en un console log el array.
 
-// const placesToTravel2 = [
-//     {id: 5, name: 'Japan'}, {id: 11, name: 'Venecia'}, {id: 23, name: 'Murcia'}, 
-//     {id: 40, name: 'Santander'}, {id: 44, name: 'Filipinas'}, {id: 59, name: 'Madagascar'}
-// ];
+const placesToTravel2 = [
+    {id: 5, name: 'Japan'}, {id: 11, name: 'Venecia'}, {id: 23, name: 'Murcia'}, 
+    {id: 40, name: 'Santander'}, {id: 44, name: 'Filipinas'}, {id: 59, name: 'Madagascar'}
+];
+
+for (let index = 0; index < placesToTravel2.length; index++) {
+    const countrys = placesToTravel2[index];
+    
+    if (countrys.id === 11 || countrys.id === 40) {
+        placesToTravel2.splice(index, 1);
+        
+    }
+    
+}
+console.log(placesToTravel2);
 
 //! Iteración 6
 //? Usa un bucle for para recorrer todos los juguetes y elimina los que incluyan la palabra gato.
