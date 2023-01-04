@@ -18,13 +18,33 @@ for (let index = 0; index < products.length; index++) {
 //?Comprueba en cada uno de los usuarios que tenga al menos dos trimestres aprobados y añade la propiedad
 //?  isApproved a true o false en consecuencia. Una vez lo tengas compruébalo con un console.log.
 
-// const alumns = [
-//         {name: 'Pepe Viruela', T1: false, T2: false, T3: true}, 
-// 		{name: 'Lucia Aranda', T1: true, T2: false, T3: true},
-// 		{name: 'Juan Miranda', T1: false, T2: true, T3: true},
-// 		{name: 'Alfredo Blanco', T1: false, T2: false, T3: false},
-// 		{name: 'Raquel Benito', T1: true, T2: true, T3: true}
-// ]
+const alumns = [
+        {name: 'Pepe Viruela', T1: false, T2: false, T3: true}, 
+		{name: 'Lucia Aranda', T1: true, T2: false, T3: true},
+		{name: 'Juan Miranda', T1: false, T2: true, T3: true},
+		{name: 'Alfredo Blanco', T1: false, T2: false, T3: false},
+		{name: 'Raquel Benito', T1: true, T2: true, T3: true}
+]
+
+for (let index = 0; index < alumns.length; index++) {
+    const aluno = alumns[index];
+    
+    if (aluno.T1 && aluno.T2 === true) {
+        console.log(aluno.name + " isApproved")
+    }
+    else if (aluno.T1 && aluno.T3 === true){
+        console.log(aluno.name + " isApproved");
+    }
+    else if (aluno.T2 && aluno.T3 === true){
+        console.log(aluno.name + " isApproved");
+    }
+    else{
+        console.log(aluno.name + " is not approved");
+    }
+   
+    
+}
+
 //! Iteración 3
 //? Usa un bucle forof para recorrer todos los destinos del array. Imprime en un console.log sus valores.
 
